@@ -40,4 +40,30 @@ public class EmployeeService {
         ).toList();
         return period;
     }
+    public List<Employee> getEmployeeWithNoDept(){
+        return EmployeeRepository.getEmployees().stream().filter(e->e.getDepartment()==null).collect(Collectors.toList());
+    }
+
+    public List<Department> getDeptWithNoEmployee(){
+        List<Integer> deptIds=EmployeeRepository.getEmployees()
+                .stream()
+                .filter(e->e.getDepartment()!=null)
+                .map(e->e.getDepartment().getDepartmentId())
+                .toList();
+        return EmployeeRepository.getDepartments().stream().filter(d->!deptIds.contains(d.getDepartmentId())).collect(Collectors.toList());
+    }
+
+    public String getDeptWithMostEmployee(){
+        return EmployeeRepository.getEmployees()
+                .stream()
+                .filter(e->e.getDepartment()!=null)
+                .collect(Collectors.groupingBy(e -> e.getDepartment(),
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(e -> e.getKey().getDepartmentName())
+                .orElse(null);
+    }
 }
