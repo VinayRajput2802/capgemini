@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Function Interface and Stream api.iml" filepath="$PROJECT_DIR$/Function Interface and Stream api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Simple_interface/Simple_interface.iml" filepath="$PROJECT_DIR$/Simple_interface/Simple_interface.iml" />
+    </modules>
+  </component>
+</project>
