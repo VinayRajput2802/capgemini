@@ -45,4 +45,13 @@
                 <property name="zip" value="999999"></property>
     </bean>
 
+    <bean id="jk" class="com.cg.bean.JKtyre"></bean>
+    <bean id="mrf" class="com.cg.bean.MRFtyre"></bean>
+    <bean id="petrol" class="com.cg.bean.PetrolEngine"></bean>
+    <bean id="cng" class="com.cg.bean.CNGengine"></bean>
+
+    <bean id="car" class="com.cg.bean.Car">
+        <property name="name" value="Honda-City"></property>
+    </bean>
+
 </beans>

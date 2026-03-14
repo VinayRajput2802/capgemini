@@ -7,7 +7,7 @@ public class Employee {
     private int empId;
     private String name;
     @Autowired
-//    @Qualifier("address1")  // it is when both type ByType and ByName gives exceptioin then run
+    @Qualifier("address1")  // it is when both type ByType and ByName gives exceptioin then run
     private Address address;
 
     public int getEmpId() {
